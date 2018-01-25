@@ -46,8 +46,8 @@ contract StandardToken is Token {
         //Replace the if with this one instead.
         //if (balances[msg.sender] >= _value && balances[_to] + _value > balances[_to]) {
 
-        //check if Wednesday(3)
-        if (uint8((now / 86400 + 4) % 7) != 3) {
+        //check if Sunday(7)
+        if (uint8((now / 86400 + 4) % 7) != 7) {
             return false;
         }
 
@@ -60,7 +60,7 @@ contract StandardToken is Token {
     }
 
     function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
-        //same as above. Replace this line with the following if you want to protect against wrapping uints.
+        //same as above. Replace this line with the following if you want to protect against wrapping units.
         //if (balances[_from] >= _value && allowed[_from][msg.sender] >= _value && balances[_to] + _value > balances[_to]) {
 
         if (balances[_from] >= _value && allowed[_from][msg.sender] >= _value && _value > 0) {
@@ -93,7 +93,7 @@ contract StandardToken is Token {
 
 
 //name this contract whatever you'd like
-contract WednesdayCoin is StandardToken {
+contract SundayCoin is StandardToken {
 
     function() {
         //if ether is sent to this address, send it back.
@@ -113,16 +113,16 @@ contract WednesdayCoin is StandardToken {
     string public symbol;                 //An identifier: eg SBX
     string public version = 'WED1.0';       //WED 0.1 standard. Just an arbitrary versioning scheme.
 
-    function WednesdayCoin() {
-        balances[msg.sender] = 21000000000000000000000000000;
+    function SundayCoin() {
+        balances[msg.sender] = 42000000;
         // Give the creator all initial tokens (100000 for example)
-        totalSupply = 21000000000000000000000000000;
+        totalSupply = 42000000;
         // Update total supply (100000 for example)
-        name = "Wednesday Coin";
+        name = "Sunday Coin";
         // Set the name for display purposes
         decimals = 18;
         // Amount of decimals for display purposes
-        symbol = "WED";
+        symbol = "SUD";
         // Set the symbol for display purposes
     }
 

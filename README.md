@@ -1,5 +1,5 @@
-# WednesdayCoin
-Smart Contract for Wednesday Coin - A coin that you can only use on Wednesdays! Great utility to help you store value without the worry of spending it.
+# SundayCoin
+Smart Contract for Sunday Coin - A coin that you can only use on Sundays! Great utility to help you store value without the worry of spending it.
 
 #### Contract Address: 0x6BB6CdACABca8CcdE8E015dEe0def578E1af9574
 
@@ -7,9 +7,9 @@ https://etherscan.io/address/0x6bb6cdacabca8ccde8e015dee0def578e1af9574
 
 ### FAQ:
 
-### Why Wednesday?
+### Why Sudnay?
 
-Cause I never could get the hang of Thursdays
+It's the Weekend!
 
 ### How is the day being calculated?
 
